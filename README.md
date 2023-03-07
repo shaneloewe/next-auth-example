@@ -25,7 +25,7 @@ cp .env.local.example .env.local
 
 For Google OAuth, visit: [https://console.cloud.google.com/apis/credentials](https://console.cloud.google.com/apis/credentials), add a new OAuth 2.0 Client under `OAuth 2.0 Client IDs` section, and make sure to have [http://localhost:3000/api/auth/callback/google](http://localhost:3000/api/auth/callback/google) as the `Authorized redirect URI` to have this running locally. You must also add any production URIs as well (i.e., [https://authsandbox.vercel.app/api/auth/callback/google](https://authsandbox.vercel.app/api/auth/callback/google)). 
 
-While you are there, you need to copy both ClientID and ClientSecrete and update .env.local file (i.e., `GOOGLE_ID` = ClientId, `GOOGLE_SECRET` = ClientSecrete).
+While you are there, you need to copy both `Client ID` and `Client secrete` and update .env.local file (i.e., `GOOGLE_ID` = `Client ID`, `GOOGLE_SECRET` = `Client secrete`).
 
 ### 4. Start the application
 

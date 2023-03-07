@@ -2,7 +2,7 @@ NextAuth.js is a complete open source authentication solution.
 
 This is an example application that shows how `next-auth` is applied to a basic Next.js app.
 
-The deployed version can be found at [`authsandbox.vercel.app](https://authsandbox.vercel.app/)
+The deployed version can be found at [authsandbox.vercel.app](https://authsandbox.vercel.app/)
 
 ## Getting Started
 
@@ -23,7 +23,9 @@ cp .env.local.example .env.local
 ```
 ### 3. Configure Authentication Providers
 
-For Google OAuth, visit: [https://console.cloud.google.com/apis/credentials](https://console.cloud.google.com/apis/credentials), add a new OAuth 2.0 Client, and make sure to have [http://localhost:3000/api/auth/callback/google](http://localhost:3000/api/auth/callback/google) as the [Authorized redirect URI] to have this running locally. You must also add PRODUCTION URIs as well (i.e., [https://authsandbox.vercel.app/api/auth/callback/google](https://authsandbox.vercel.app/api/auth/callback/google)). While you are there, you need to copy both ClientID and ClientSecrete and update .env.local file (i.e., GOOGLE_ID = ClientId, GOOGLE_SECRET = ClientSecrete).
+For Google OAuth, visit: [https://console.cloud.google.com/apis/credentials](https://console.cloud.google.com/apis/credentials), add a new OAuth 2.0 Client, and make sure to have [http://localhost:3000/api/auth/callback/google](http://localhost:3000/api/auth/callback/google) as the [Authorized redirect URI] to have this running locally. 
+
+You must also add any production URIs as well (i.e., [https://authsandbox.vercel.app/api/auth/callback/google](https://authsandbox.vercel.app/api/auth/callback/google)). While you are there, you need to copy both ClientID and ClientSecrete and update .env.local file (i.e., `GOOGLE_ID` = ClientId, `GOOGLE_SECRET` = ClientSecrete).
 
 ### 4. Start the application
 
@@ -42,7 +44,9 @@ npm run start
 
 ### 5. Preparing for Production
 
-Follow the [Deployment documentation](https://next-auth.js.org/deployment). To support Vercel production, review the following list of settings. Notice that adding new env vars will not take effect without a new deployemnt (e.g., new commit to Github). Visit [https://generate-secret.vercel.app/32](https://generate-secret.vercel.app/32) to get a randomly generated value that will be use dot set  `NEXTAUTH_SECRET`
+Follow the [Deployment documentation](https://next-auth.js.org/deployment). To support Vercel production, review the following list of settings. Notice that adding new env vars will not take effect without a new deployemnt (e.g., new commit to Github). 
+
+Make sure to also visit [https://generate-secret.vercel.app/32](https://generate-secret.vercel.app/32) to get a randomly generated value that will be use dot set  `NEXTAUTH_SECRET`
 
 ![alt text](vercelsettings.png)
 
